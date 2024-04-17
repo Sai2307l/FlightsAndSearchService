@@ -20,4 +20,11 @@
 }
 ```
 
-- Once you have added your db config as listed above, go to the src flder from your terminal and execute `nx sequelize db:create`
+- Once you have added your db config as listed above, go to the src folder from your terminal and execute `nx sequelize db:create`
+
+## DB Design
+
+- Airplane Table[id,model_number,capacity,created_at,updated_at]
+- Flight[id,src_airport_id,dest_airport_id,departure_date,arrival_date,departure_time,arrival_time]
+- City[id,name]
+- Airport[id,name,city_id,address]
