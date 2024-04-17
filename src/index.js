@@ -9,6 +9,8 @@ const setupAndStartServer = async () => {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 
-  app.listen(port, () => console.log(`app listening on port ${port}!`));
+  app.listen(port, async () => {
+    console.log(`app listening on port ${port}!`);
+  });
 };
 setupAndStartServer();
