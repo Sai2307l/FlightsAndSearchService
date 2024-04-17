@@ -1,5 +1,3 @@
-
-
-module.exports= {
-    CityRepo:require("./city-repository");
-}
+module.exports = {
+  CityRepo: require("./city-repository"),
+};
