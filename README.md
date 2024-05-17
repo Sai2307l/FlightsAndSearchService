@@ -31,3 +31,11 @@
 - Flight[id,src_airport_id,dest_airport_id,departure_date,arrival_date,departure_time,arrival_time]
 - City[id,name]
 - Airport[id,name,city_id,address]
+
+
+npx sequelize model:generate --name Airport --attributes 
+name:String,address:String,cityId:Integer
+
+
+
+Routes --> MiddleWare --> Controllers --> Service --> Repository -->  Models
