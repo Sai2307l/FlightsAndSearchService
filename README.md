@@ -32,10 +32,14 @@
 - City[id,name]
 - Airport[id,name,city_id,address]
 
-
-npx sequelize model:generate --name Airport --attributes 
+```
+npx sequelize model:generate --name Airport --attributes
 name:String,address:String,cityId:Integer
 
+npx sequelize seed:generate --name add-airports
 
+npx sequelize db:seed:all
 
-Routes --> MiddleWare --> Controllers --> Service --> Repository -->  Models
+```
+
+Routes --> MiddleWare --> Controllers --> Service --> Repository --> Models
