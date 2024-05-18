@@ -4,8 +4,7 @@ const bodyParser = require("body-parser");
 const { port } = require("./config/serverConfig.js");
 const ApiRoutes = require("./routes/index.js");
 
-const { Airport, City } = require("./models/index.js");
-const { where } = require("sequelize");
+const db = require("./models/index.js");
 
 const setupAndStartServer = async () => {
   const app = express();
@@ -18,12 +17,9 @@ const setupAndStartServer = async () => {
   app.listen(port, async () => {
     console.log(`app listening on port ${port}!`);
 
-    // const airports = await Airport.findAll({
-    //   include: City,
-    // });
-    // console.log(airports);
-    const CityAirport = await City.findAll();
-    console.log(CityAirport);
+    if (process.env.DB_sync) {
+      db.sequelize.sync({ alter: true });
+    }
   });
 };
 setupAndStartServer();
