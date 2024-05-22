@@ -5,8 +5,8 @@ const { port } = require("./config/serverConfig.js");
 const ApiRoutes = require("./routes/index.js");
 
 const db = require("./models/index.js");
-const { Airplane } = require("./models/index.js");
-const { where, Model } = require("sequelize");
+const { Airport } = require("./models/index.js");
+// const { where, Model } = require("sequelize");
 // const { Airplane } = require("./models/airplane.js");
 
 const setupAndStartServer = async () => {
