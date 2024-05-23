@@ -24,11 +24,11 @@ const createFlight = async (req, res) => {
 
 const findFlight = async (req, res) => {
   try {
-    const flight = await flightService.getFlightData(req.body);
-    return res.status(201).json({
-      data: flight,
+    const response = await flightService.getFlightData(req.query);
+    return res.status(200).json({
+      data: response,
       success: true,
-      message: "Successfully find a flight",
+      message: "Successfully found all possible flights",
       err: {},
     });
   } catch (error) {
