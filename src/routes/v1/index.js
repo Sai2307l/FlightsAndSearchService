@@ -11,4 +11,10 @@ router.get("/city", Controller.getAll);
 router.post("/flights", Controller.createFlight);
 router.get("/flights", Controller.findFlight);
 
+router.post("/airport", Controller.createAirport);
+router.delete("/airport/:id", Controller.destroyAirport);
+router.get("/airport/:id", Controller.getAirport);
+router.patch("/airport/:id", Controller.updateAirport);
+router.get("/airport", Controller.getAllAirport);
+
 module.exports = router;
